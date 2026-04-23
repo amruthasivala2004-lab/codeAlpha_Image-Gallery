@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+
+  <img src="https://picsum.photos/500/300?1" class="nature" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/500/300?2" class="city" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/500/300?3" class="nature" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/500/300?4" class="city" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/500/300?5" class="nature" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/500/300?6" class="city" onclick="openLightbox(this)">
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img">
+  
+  <div class="nav">
+    <button onclick="changeImage(-1)">❮ Prev</button>
+    <button onclick="changeImage(1)">Next ❯</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
